@@ -186,3 +186,7 @@ for i, s in enumerate(res_list):
 
 """
 ```
+
+求解的结果如下：
+
+![i](https://github.com/zenghang-feng/operation_optimization/blob/main/02-整数规划-物流组合方案/图片附件/pic_res.png)
