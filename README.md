@@ -1,2 +1,2 @@
-# operation_optimization
-包含了一些运筹优化模型的示例（It contains some operation examples）
+# 运筹优化
+包含了一些运筹优化模型的示例，以及不同优化问题的求解算法。
