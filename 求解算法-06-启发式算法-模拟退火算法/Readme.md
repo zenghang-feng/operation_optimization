@@ -42,19 +42,19 @@ T = T_start
 while T > T_end:
     for i in range(L_at_T):
         x_new = x + np.random.uniform(low=-1, high=1, size=1)[0]
-        if 0 < x_new < 15:
-            f_dif = f(x_new) - f(x)
-            if f_dif > 0:
+        if 0 < x_new < 15:                                          # 判断新生成自变量的范围
+            f_dif = f(x_new) - f(x)                                 # 判断新旧两个状态对应的函数值
+            if f_dif > 0:                                           # 求解的是最大化问题，所以新值大于旧值继续迭代
                 x = x_new
             else:
-                p_de = np.exp(f_dif/(k*T))
+                p_de = np.exp(f_dif/(k*T))                          # 新函数值小于旧函数值，按照降温概率p_de和0到1之间随机值比较，以一定概率迭代
                 if p_de > np.random.rand():
                     x = x_new
                 else:
                     pass
         else:
             pass
-    T = T * r_atten
+    T = T * r_atten                                                 # 温度下降
 
 print("最优解对应的x", x, "最优解", f(x))
 ```
